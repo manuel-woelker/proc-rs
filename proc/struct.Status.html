@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Status` struct in crate `proc`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Status">
+
+    <title>proc::Status - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='index.html'>proc</a></p><script>window.sidebarCurrent = {name: 'Status', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='index.html'>proc</a>::<wbr><a class='struct' href=''>Status</a></span><span class='out-of-band'><span id='render-detail'>
+            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                [<span class='inner'>&#x2212;</span>]
+            </a>
+        </span><a id='src-3156' class='srclink' href='../src/proc/status.rs.html#34-145' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct Status {
+    pub command: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>,
+    pub state: <a class='enum' href='../proc/enum.State.html' title='proc::State'>State</a>,
+    pub pid: <a class='type' href='https://doc.rust-lang.org/nightly/std/sys/ext/raw/type.pid_t.html' title='std::sys::ext::raw::pid_t'>pid_t</a>,
+    pub numa_gid: <a class='type' href='https://doc.rust-lang.org/nightly/std/sys/ext/raw/type.pid_t.html' title='std::sys::ext::raw::pid_t'>pid_t</a>,
+    pub tid: <a class='type' href='https://doc.rust-lang.org/nightly/std/sys/ext/raw/type.pid_t.html' title='std::sys::ext::raw::pid_t'>pid_t</a>,
+    pub ppid: <a class='type' href='https://doc.rust-lang.org/nightly/std/sys/ext/raw/type.pid_t.html' title='std::sys::ext::raw::pid_t'>pid_t</a>,
+    pub tracer_pid: <a class='type' href='https://doc.rust-lang.org/nightly/std/sys/ext/raw/type.pid_t.html' title='std::sys::ext::raw::pid_t'>pid_t</a>,
+    pub uid_real: <a class='type' href='https://doc.rust-lang.org/nightly/std/sys/ext/raw/type.uid_t.html' title='std::sys::ext::raw::uid_t'>uid_t</a>,
+    pub uid_effective: <a class='type' href='https://doc.rust-lang.org/nightly/std/sys/ext/raw/type.uid_t.html' title='std::sys::ext::raw::uid_t'>uid_t</a>,
+    pub uid_saved: <a class='type' href='https://doc.rust-lang.org/nightly/std/sys/ext/raw/type.uid_t.html' title='std::sys::ext::raw::uid_t'>uid_t</a>,
+    pub uid_fs: <a class='type' href='https://doc.rust-lang.org/nightly/std/sys/ext/raw/type.uid_t.html' title='std::sys::ext::raw::uid_t'>uid_t</a>,
+    pub gid_real: <a class='type' href='https://doc.rust-lang.org/nightly/std/sys/ext/raw/type.gid_t.html' title='std::sys::ext::raw::gid_t'>gid_t</a>,
+    pub gid_effective: <a class='type' href='https://doc.rust-lang.org/nightly/std/sys/ext/raw/type.gid_t.html' title='std::sys::ext::raw::gid_t'>gid_t</a>,
+    pub gid_saved: <a class='type' href='https://doc.rust-lang.org/nightly/std/sys/ext/raw/type.gid_t.html' title='std::sys::ext::raw::gid_t'>gid_t</a>,
+    pub gid_fs: <a class='type' href='https://doc.rust-lang.org/nightly/std/sys/ext/raw/type.gid_t.html' title='std::sys::ext::raw::gid_t'>gid_t</a>,
+    pub fd_allocated: <a href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+    pub groups: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='type' href='https://doc.rust-lang.org/nightly/std/sys/ext/raw/type.gid_t.html' title='std::sys::ext::raw::gid_t'>gid_t</a>&gt;,
+    pub ns_pids: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='type' href='https://doc.rust-lang.org/nightly/std/sys/ext/raw/type.pid_t.html' title='std::sys::ext::raw::pid_t'>pid_t</a>&gt;,
+    pub ns_tids: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='type' href='https://doc.rust-lang.org/nightly/std/sys/ext/raw/type.pid_t.html' title='std::sys::ext::raw::pid_t'>pid_t</a>&gt;,
+    pub ns_pgids: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='type' href='https://doc.rust-lang.org/nightly/std/sys/ext/raw/type.pid_t.html' title='std::sys::ext::raw::pid_t'>pid_t</a>&gt;,
+    pub ns_sids: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='type' href='https://doc.rust-lang.org/nightly/std/sys/ext/raw/type.pid_t.html' title='std::sys::ext::raw::pid_t'>pid_t</a>&gt;,
+    pub vm_peak: <a href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub vm_size: <a href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub vm_locked: <a href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub vm_pin: <a href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub vm_hwm: <a href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub vm_rss: <a href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub vm_data: <a href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub vm_stack: <a href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub vm_exe: <a href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub vm_lib: <a href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub vm_pte: <a href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub vm_pmd: <a href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub vm_swap: <a href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub threads: <a href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+    pub sig_queued: <a href='https://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a>,
+    pub sig_queued_max: <a href='https://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a>,
+    pub sig_pending_thread: <a href='https://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a>,
+    pub sig_pending_process: <a href='https://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a>,
+    pub sig_blocked: <a href='https://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a>,
+    pub sig_ignored: <a href='https://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a>,
+    pub sig_caught: <a href='https://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a>,
+    pub cap_inherited: <a href='https://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a>,
+    pub cap_permitted: <a href='https://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a>,
+    pub cap_effective: <a href='https://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a>,
+    pub cap_bounding: <a href='https://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a>,
+    pub seccomp: <a class='enum' href='../proc/enum.SeccompMode.html' title='proc::SeccompMode'>SeccompMode</a>,
+    pub cpus_allowed: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html' title='alloc::boxed::Box'>Box</a>&lt;<a href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>[<a href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>]</a>&gt;,
+    pub mems_allowed: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html' title='alloc::boxed::Box'>Box</a>&lt;<a href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>[<a href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>]</a>&gt;,
+    pub voluntary_ctxt_switches: <a href='https://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a>,
+    pub nonvoluntary_ctxt_switches: <a href='https://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a>,
+}</pre><div class='docblock'><p>Provides status information for a process.</p>
+</div><h2 class='fields'>Fields</h2>
+<table><tr class='stab '>
+                                  <td id='structfield.command'><code>command</code></td><td><div class='docblock'><p>Command run by this process.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.state'><code>state</code></td><td><div class='docblock'><p>Current state of the process.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.pid'><code>pid</code></td><td><div class='docblock'><p>Thread Group ID (i.e., Process ID).</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.numa_gid'><code>numa_gid</code></td><td><div class='docblock'><p>NUMA group ID.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.tid'><code>tid</code></td><td><div class='docblock'><p>Thread ID.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.ppid'><code>ppid</code></td><td><div class='docblock'><p>Process ID of parent process.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.tracer_pid'><code>tracer_pid</code></td><td><div class='docblock'><p>Process ID of the process tracing this process (0 if not being traced).</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.uid_real'><code>uid_real</code></td><td><div class='docblock'><p>Real user ID.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.uid_effective'><code>uid_effective</code></td><td><div class='docblock'><p>Effective user ID.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.uid_saved'><code>uid_saved</code></td><td><div class='docblock'><p>Saved user ID.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.uid_fs'><code>uid_fs</code></td><td><div class='docblock'><p>Filesystem user ID.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.gid_real'><code>gid_real</code></td><td><div class='docblock'><p>Real group ID.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.gid_effective'><code>gid_effective</code></td><td><div class='docblock'><p>Effective group ID.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.gid_saved'><code>gid_saved</code></td><td><div class='docblock'><p>Saved group ID.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.gid_fs'><code>gid_fs</code></td><td><div class='docblock'><p>Filesystem group ID.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.fd_allocated'><code>fd_allocated</code></td><td><div class='docblock'><p>Number of file descriptor slots currently allocated.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.groups'><code>groups</code></td><td><div class='docblock'><p>Supplementary group list.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.ns_pids'><code>ns_pids</code></td><td><div class='docblock'><p>Process IDs for each namespace which the process belongs to.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.ns_tids'><code>ns_tids</code></td><td><div class='docblock'><p>Thread IDs for each namespace which the process belongs to.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.ns_pgids'><code>ns_pgids</code></td><td><div class='docblock'><p>Process group IDs for each namespace which the process belongs to.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.ns_sids'><code>ns_sids</code></td><td><div class='docblock'><p>Session IDs of the process for each namespace to which it belongs.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.vm_peak'><code>vm_peak</code></td><td><div class='docblock'><p>Peak virtual memory size (kB).</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.vm_size'><code>vm_size</code></td><td><div class='docblock'><p>Virtual memory size (kB).</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.vm_locked'><code>vm_locked</code></td><td><div class='docblock'><p>Locked memory size (kB) (see mlock(3)).</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.vm_pin'><code>vm_pin</code></td><td><div class='docblock'><p>Pinned memory size (since Linux 3.2). These are pages that can&#39;t be moved because
+something needs to directly access physical memory.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.vm_hwm'><code>vm_hwm</code></td><td><div class='docblock'><p>Peak resident size (kB) (&quot;high water mark&quot;).</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.vm_rss'><code>vm_rss</code></td><td><div class='docblock'><p>Resident set size.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.vm_data'><code>vm_data</code></td><td><div class='docblock'><p>Size of data segments (kB).</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.vm_stack'><code>vm_stack</code></td><td><div class='docblock'><p>Size of stack segments (kB).</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.vm_exe'><code>vm_exe</code></td><td><div class='docblock'><p>Size of text (executable) segments (kB).</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.vm_lib'><code>vm_lib</code></td><td><div class='docblock'><p>Shared library code size (kB).</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.vm_pte'><code>vm_pte</code></td><td><div class='docblock'><p>Page table entries size (since Linux 2.6.10).</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.vm_pmd'><code>vm_pmd</code></td><td><div class='docblock'><p>Size of second-level page tables (since Linux 4.0).</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.vm_swap'><code>vm_swap</code></td><td><div class='docblock'><p>Swapped-out-virtual memory size (since Linux 2.6.34).</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.threads'><code>threads</code></td><td><div class='docblock'><p>Number of threads in process containing this thread.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.sig_queued'><code>sig_queued</code></td><td><div class='docblock'><p>The number of currently queued signals for this real user ID
+(see the description of RLIMIT_SIGPENDING in getrlimit(2)).</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.sig_queued_max'><code>sig_queued_max</code></td><td><div class='docblock'><p>The resource limit on the number of queued signals for this process.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.sig_pending_thread'><code>sig_pending_thread</code></td><td><div class='docblock'><p>Number of signals pending for the thread (see pthreads(7)).</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.sig_pending_process'><code>sig_pending_process</code></td><td><div class='docblock'><p>Number of signals pending for the process (see signal(7)).</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.sig_blocked'><code>sig_blocked</code></td><td><div class='docblock'><p>Mask indicating signals being blocked.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.sig_ignored'><code>sig_ignored</code></td><td><div class='docblock'><p>Mask indicating signals being ignored.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.sig_caught'><code>sig_caught</code></td><td><div class='docblock'><p>Mask indicating signals being caught.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.cap_inherited'><code>cap_inherited</code></td><td><div class='docblock'><p>Mask of capabilities enabled in inheritable sets (see capabilities(7)).</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.cap_permitted'><code>cap_permitted</code></td><td><div class='docblock'><p>Mask of capabilities enabled in permitted sets.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.cap_effective'><code>cap_effective</code></td><td><div class='docblock'><p>Mask of capabilities enabled in effective sets.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.cap_bounding'><code>cap_bounding</code></td><td><div class='docblock'><p>Capability Bounding set (since Linux 2.6.26).</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.seccomp'><code>seccomp</code></td><td><div class='docblock'><p>Secure Computing mode of the process (since Linux 3.8, see seccomp(2)).
+This field is provided only if the kernel was built with the
+<code>CONFIG_SECCOMP</code> kernel configuration option enabled.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.cpus_allowed'><code>cpus_allowed</code></td><td><div class='docblock'><p>CPUs on which this process may run (since Linux 2.6.24, see cpuset(7)).</p>
+
+<p>The slice represents a bitmask in the same format as <code>BitVec</code>.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.mems_allowed'><code>mems_allowed</code></td><td><div class='docblock'><p>Memory nodes allowed to this process (since Linux 2.6.24, see cpuset(7)).</p>
+
+<p>The slice represents a bitmask in the same format as <code>BitVec</code>.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.voluntary_ctxt_switches'><code>voluntary_ctxt_switches</code></td><td><div class='docblock'><p>Number of voluntary context switches.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.nonvoluntary_ctxt_switches'><code>nonvoluntary_ctxt_switches</code></td><td><div class='docblock'><p>Number of involuntary context switches.</p>
+</div></td></tr></table><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/hash/trait.Hash.html' title='core::hash::Hash'>Hash</a> for <a class='struct' href='../proc/struct.Status.html' title='proc::Status'>Status</a></code></h3><div class='impl-items'><h4 id='method.hash' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/hash/trait.Hash.html#method.hash' class='fnname'>hash</a>&lt;__H: <a class='trait' href='https://doc.rust-lang.org/nightly/core/hash/trait.Hasher.html' title='core::hash::Hasher'>Hasher</a>&gt;(&amp;self, __arg_0: &amp;mut __H)</code></h4>
+<h4 id='method.hash_slice' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/hash/trait.Hash.html#method.hash_slice' class='fnname'>hash_slice</a>&lt;H&gt;(data: <a href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;[Self]</a>, state: &amp;mut H) <span class='where'>where H: <a class='trait' href='https://doc.rust-lang.org/nightly/core/hash/trait.Hasher.html' title='core::hash::Hasher'>Hasher</a></span></code></h4>
+</div><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.Eq.html' title='core::cmp::Eq'>Eq</a> for <a class='struct' href='../proc/struct.Status.html' title='proc::Status'>Status</a></code></h3><div class='impl-items'></div><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html' title='core::cmp::PartialEq'>PartialEq</a> for <a class='struct' href='../proc/struct.Status.html' title='proc::Status'>Status</a></code></h3><div class='impl-items'><h4 id='method.eq' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#method.eq' class='fnname'>eq</a>(&amp;self, __arg_0: &amp;<a class='struct' href='../proc/struct.Status.html' title='proc::Status'>Status</a>) -&gt; <a href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<h4 id='method.ne' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#method.ne' class='fnname'>ne</a>(&amp;self, __arg_0: &amp;<a class='struct' href='../proc/struct.Status.html' title='proc::Status'>Status</a>) -&gt; <a href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+</div><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../proc/struct.Status.html' title='proc::Status'>Status</a></code></h3><div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#method.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+</div><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../proc/struct.Status.html' title='proc::Status'>Status</a></code></h3><div class='impl-items'><h4 id='method.default' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html#method.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../proc/struct.Status.html' title='proc::Status'>Status</a></code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div>
+            <div class="shortcuts">
+                <h1>Keyboard Shortcuts</h1>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h1>Search Tricks</h1>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code>)
+                </p>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "proc";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script async src="../search-index.js"></script>
+</body>
+</html>

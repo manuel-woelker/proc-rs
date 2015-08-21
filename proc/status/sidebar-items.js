@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["SeccompMode","The Secure Computing state of a process."]],"fn":[["status","Returns memory status information for the process with the provided pid."],["status_self","Returns memory status information for the current process."]],"struct":[["Status","Provides status information for a process."]]});

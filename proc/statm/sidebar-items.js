@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["statm","Returns memory status information for the process with the provided pid."],["statm_self","Returns memory status information for the current process."]],"struct":[["Statm","Provides information about memory usage, as measured in pages."]]});
